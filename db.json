@@ -1,0 +1,21 @@
+{
+   "poke":[{
+        "id": 1,
+        "name": "resh",
+        "type": "normal",
+        "isCool": true,
+        "isStylish": false
+    },{
+        "id": 2,
+        "name": "rith",
+        "type": "hard",
+        "isCool": true,
+        "isStylish": false
+    },{
+        "id": 3,
+        "name": "zez",
+        "type": "hard",
+        "isCool": false,
+        "isStylish": true
+    }]    
+}

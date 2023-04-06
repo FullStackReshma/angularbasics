@@ -1,0 +1,25 @@
+<form #form="ngForm" (ngSubmit)="handleSubmit(form)"> 
+  Name: <input type="text" [(ngModel)]="poke.name" name="name"/>
+  <label>
+    <input type="radio" [ngModel]="poke.isCool" name="isCool" [value]="true" #pokeName="ngModel"/>Is Cool?
+  </label>
+  <label>
+    <input type="radio" [ngModel]="poke.isCool" name="isCool" [value]="false" (ngModelChange)="toggleIsCool($event)"/>Is Not Cool?
+  </label>
+  <label>
+    <input type="checkbox" [ngModel]="poke.acceptTerms" name="acceptTerms"/>Please check to accept terms
+  </label>
+  <label>
+    Poke type:
+    <select  name="pokeType" [ngModel]="poke.name">
+      <option *ngFor="let type of pokeType" [value]="type.value" [selected]="type.value === poke.type">{{type.value}}</option>
+    </select>
+  </label>
+  <button type="submit" [disabled]="!form.valid">save</button>
+</form>
+
+<div>
+  MODEL: {{poke | json}}
+FORM : {{ form.value | json}}
+ERROR : <div *ngIf="!pokeName.pristine"> NOT PRISTINE ANY MORE</div>
+</div>

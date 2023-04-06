@@ -1,0 +1,13 @@
+<table>
+  <thead>
+    <th>Index</th>
+    <th>Name</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+    <app-product-detail *ngFor="let poke of pokes" [detail]="poke" (remove)="handleRemove($event)"></app-product-detail>
+  </tbody>
+</table>
+
+
+

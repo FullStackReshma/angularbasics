@@ -1,0 +1,37 @@
+<p>angular-basics works!</p>
+<div>
+    <div>
+        <img [src]="imgSrc" alt="my image">
+        <div>
+            <input [(ngModel)]="favAnimal" />
+        </div>
+        <p>{{favAnimal}}</p>
+    </div>
+    <hr>
+    <div>
+        <label>first Name:</label> <br>
+        <input value="Reshma"> <br>
+        <label>last Name:</label> <br>
+        <input value="Suresh"> <br>
+        <input type="submit">
+    </div>
+    <div>
+        <input type="text" #pock />
+        <button (click)="handleClick(pock)">click me</button>
+    </div>
+    <hr>
+    <div>
+        <input type="text" [value]="myName" (input)="handleChange($event)" />
+        <p>Name: {{ myName }}</p>
+        <!-- <div *ngIf="!myName"></div>
+        no search results found
+        </div> -->
+        <ng-container *ngIf="myName.length; then myNameList; else noNameList "></ng-container>
+        <ng-template #myNameList>
+            <h1>All list avilable</h1>
+        </ng-template>
+        <ng-template #noNameList>
+            <h1>No list Available</h1>
+        </ng-template>
+    </div>
+</div>

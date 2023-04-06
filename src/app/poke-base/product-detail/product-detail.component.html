@@ -1,0 +1,29 @@
+
+<tr>
+    <td [class.cool-bool]="detail.isCool">{{detail.id}}:{{ detail.name }}</td>
+    <td [style.backgroundColor]="(detail.isStylish ? '#BF408F' : '')"></td>
+    <td  [class.cool-bool]="detail.isCool">{{ detail.type }}</td>
+    <button (click)="onRemove()">Remove</button>
+</tr>
+
+
+<!-- <table>
+    <thead>
+      <th>Index</th>
+      <th>Name</th>
+      <th>Type</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let poke of pokes; let i = index">
+      <td [class.cool-bool]="poke.isCool">{{i}}</td>
+      <td [style.backgroundColor]="(poke.isStylish ? '#BF408F' : '')">{{ poke.name }}</td>
+      <td >{{ poke.type }}</td>
+      </tr>
+      <hr>
+      <tr *ngFor="let poke of pokes; let i = index">
+        <td [ngClass]="{'cool-bool': poke.isCool}">{{i}}</td>
+        <td [ngStyle]="{'backgroundColor': (poke.isStylish ? '#BF408F':'')}">{{ poke.name }}</td>
+        <td>{{ poke.type }}</td>
+      </tr>
+    </tbody>
+  </table> -->
